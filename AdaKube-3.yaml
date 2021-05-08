@@ -3,13 +3,6 @@ ssh_authorized_keys:
 - github:oilcrest
 hostname: AdaKube-3
 k3os:
-  data_sources:
-  - cdrom
-  modules:
-  - kvm
-  sysctl:
-    kernel.printk: "4 4 1 7"
-    kernel.kptr_restrict: "1"
   dns_nameservers:
   - 8.8.8.8
   - 1.1.1.1
@@ -18,7 +11,7 @@ k3os:
   - 1.us.pool.ntp.org
   password: $1$hZyMN38b$PdiKRNJVCHSoBDnf8Yhcf/
   server_url: https://AdaKube-1:6443
-  token: $1$hZyMN38b$PdiKRNJVCHSoBDnf8Yhcf/
+  token: K1053cf74175eb0a7994c63bb36e0b99c942a9b69d915924cbcb5a71144e6e26001::server:96407ec802fc4f9a6652426bdadafe7e
   k3s_args:
   - agent
   environment:
