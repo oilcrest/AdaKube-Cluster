@@ -1,0 +1,26 @@
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDbP4RS2xy3E0clm4Yg/qwCq6Z4ddqlrZX3szBd410lRowTu0Bi2D1LiYdvP/m1WOwhLhK0rV1Y9iZ30A/196jqvWI/y/BTDP3HE4rVnGJjiNoAE0VxvjP4GwNiddgVS27gNQrwo1CzFhUtbD89ir8d2hNKQe+Wgk8mhZt6Tqz2q6/lb4RcdoTxSQWG1I1t8f0lZxkNBMyku1cVByGeYzyJXIBII36LrG2f+M5cFfxAna7rbWI5LDrxSQWCT26w6GFZUJBNYvF6EVle23AvCCWPeQLJvfeakY8uCI4qF1gAancrGMG1The17JfvmM0dpZT3fY/P2B3GKSdDaeO9nJ8HsiJDSrv2i9acx8JKcvm1fTGdZ4OHfImFQIoZ/lxVFK+bvC1SKSbs4tuOY0aaytiNul2o0niN8p6NUJfNGtXlOE+bkM8/7D2Yi9QiHfId+ZfR0za29HUQoJTQpJimPgOh8Cs9ekAmsPob4tk+ZfIzOspku9o8/LqSpXw99t7PauU= ci@pop-os
+- github:oilcrest
+hostname: AdaKube-2
+k3os:
+  data_sources:
+  - cdrom
+  modules:
+  - kvm
+  sysctl:
+    kernel.printk: "4 4 1 7"
+    kernel.kptr_restrict: "1"
+  dns_nameservers:
+  - 8.8.8.8
+  - 1.1.1.1
+  ntp_servers:
+  - 0.us.pool.ntp.org
+  - 1.us.pool.ntp.org
+  password: $1$hZyMN38b$PdiKRNJVCHSoBDnf8Yhcf/
+  server_url: https://AdaKube-1:6443
+  token: $1$hZyMN38b$PdiKRNJVCHSoBDnf8Yhcf/
+  k3s_args:
+  - agent
+  environment:
+    http_proxy: http://AdaKube-2
+    https_proxy: http://AdaKube-2
