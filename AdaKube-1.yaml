@@ -18,3 +18,4 @@ k3os:
   environment:
     http_proxy: http://AdaKube-1
     https_proxy: http://AdaKube-1
+    
